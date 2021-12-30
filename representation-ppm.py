@@ -181,8 +181,10 @@ class Corridor():
       if self.door_open_c:
          if self.ppm > 700:
             self.ppm -= 20 * time_mutiplicator
+            my_canvas.itemconfig(self.display_ppm, text= int(self.ppm))
          elif self.ppm < 700 and self.ppm > 690:
             self.ppm = 700
+            my_canvas.itemconfig(self.display_ppm, text= int(self.ppm))
 
 
 
